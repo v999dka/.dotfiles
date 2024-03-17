@@ -1,0 +1,15 @@
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[user]
+	name = Rubén Cabrera
+	email = ruben.cabrera@sage.com
+[alias]
+	undo = reset HEAD~1
+
+[core]
+	excludesfile = /Users/ruben.cabrera/.gitignore
+[credential]
+	helper = manager-core
