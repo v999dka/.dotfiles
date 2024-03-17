@@ -1,0 +1,76 @@
+" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+"   the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+" Do incremental searching.
+set incsearch
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+" -- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+
+" Highlight copied text
+Plug 'machakann/vim-highlightedyank'
+
+" Commentary plugin
+Plug 'tpope/vim-commentary'
+
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+
+"" Custom settings
+" Set leader key to space
+let mapleader=" "
+
+" Show line numbers
+set number
+
+" Show relative line numbers
+set relativenumber
+
+" Highlight search result
+set hlsearch
+
+" Ignore case when searching
+set ignorecase
+
+" Highlight jump targets
+set quickscope
+
+
+"" Custom mappings
+" Yank to end of line
+nnoremap Y y$
+nnoremap U <C-r>
+
+" Cut all line
+nnoremap X Vx$
+
+" Move between tabs
+nmap J }
+nmap K {
+
+" View options
+nmap <leader>vf <Action>(ToggleFullScreen)
+nmap <leader>vd <Action>(ToggleDistractionFreeMode)
+nmap <leader>vp <Action>(TogglePresentationMode)
+
+" Open config ideavim
+nmap <leader>vce :e ~/.ideavimrc<CR>
+nmap <leader>vcr :source ~/.ideavimrc<CR>
+nmap <leader>o o<Esc>k
+nmap <leader>O O<Esc>j
+nmap <leader>f <Action>(GotoFile)
+nmap <leader>fr <Action>(RecentFiles)
+nmap <leader>d <Action>(GotoDeclaration)
+nmap <leader>i <Action>(GotoImplementation)
+nnoremap zC :action CollapseRegionRecursively<CR>
+nnoremap zO :action ExpandRegionRecursively<CR>
