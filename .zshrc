@@ -11,16 +11,8 @@ ZSH_THEME=agnoster
 export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-
-export MANPATH="/usr/local/man:$MANPATH"
-
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
-
-# NOTE: Useful exports
-export SCOUT_DEV_TRACE=true
-export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -39,24 +31,10 @@ export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 #
 # Example aliases
 alias zshconfig="vim ~/.zshrc"
+source ~/.zsh_profile
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# Custom alias
-alias vim="nvm use 18;nvim"
-alias sage="cd $HOME/SOURCE/rails-cakehr/src"
-alias cs50="cd $HOME/SOURCE/CS50"
-alias todo="cd $HOME/SOURCE/todoful"
-
-# Alias de server
-alias cake_server="rails s -p 3000 -b lvh.me"
-alias webpack_old="./bin/webpack-dev-server"
-alias webpack="nvm use 14; yarn start"
-alias cake_sidekick="bundle exec sidekiq -q long_queue -q files -q mailer -q calculations -q reports -q notifications -q timesheets -q scheduling -q changelog -q default -q cupcake -q google_calendar -q outlook_calendar -q recalculations,1 -q long_jobs -q repo_layer_transactions"
-
-# Alias git
-alias ggadd="git add --all -p"
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(/opt/homebrew/bin/rbenv init - zsh)"

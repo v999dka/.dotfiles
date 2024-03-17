@@ -1,0 +1,22 @@
+# Useful exports
+export SCOUT_DEV_TRACE=true
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
+export LOCAL_SCRIPTS="/Users/ruben.cabrera/.local/bin/"
+export MANPATH="/usr/local/man:$MANPATH"
+export PATH="$LOCAL_SCRIPTS:$MANPATH:$PATH"
+
+# tmux sessionizer (ctrl + f)
+bindkey -s ^f "tmux-sessionizer\n"
+
+# Custom alias
+alias vim="nvm use 18;nvim"
+alias sage="cd $HOME/SOURCE/rails-cakehr/src"
+
+alias cake_server="rails s -p 3000 -b lvh.me"
+alias webpack_old="./bin/webpack-dev-server"
+alias webpack="nvm use 14; yarn start"
+alias cake_sidekick="bundle exec sidekiq -q long_queue -q files -q mailer -q calculations -q reports -q notifications -q timesheets -q scheduling -q changelog -q default -q cupcake -q google_calendar -q outlook_calendar -q recalculations,1 -q long_jobs -q repo_layer_transactions"
+
+alias ggadd="git add --all -p"
+
