@@ -27,3 +27,10 @@ Installing brew
 
 brew bundle --file ~/.dotfiles/Brewfile
 ```
+
+when you have finished installing all the wonderful config files, is time to setup nvim
+
+```
+git clone https://github.com/v999dka/kickstart.nvim ~/.config/nvim
+```
+
